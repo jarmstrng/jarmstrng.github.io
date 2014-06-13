@@ -11,3 +11,16 @@ p {
 	color: black;
 	font-family: sans-serif;
 }
+
+ul, ol {
+	color:black;
+	font-family: sans-serif;
+}
+
+#green {
+	color: green;
+}
+
+.boring {
+	color: gray;
+}
