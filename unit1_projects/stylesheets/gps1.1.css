@@ -1,0 +1,25 @@
+
+.page {
+    color: #696969;
+    font-family: Helvetica, Arial, Sans-Serif;
+    margin: 0 auto;
+}
+
+#driver, #navigator {
+    background: #BCD2EE;
+    height: 170px;
+}
+
+#driver {
+    float: left;
+    width: 50%;
+}
+
+#navigator {
+    float: right;
+    width: 50%;
+}
+
+footer {
+    clear: both;
+}
