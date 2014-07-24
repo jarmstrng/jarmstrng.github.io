@@ -47,7 +47,10 @@ css Zen Garden submission 217 - 'Screen Filler', by Elliot Jay Stocks, http://el
 	h6 							{ font-weight:normal; }
 	h1 							{ background:#006666; color:#fff; display:inline-block; margin-bottom:1em; padding:0.5em 1em; }
 	h2 							{ color:#666666; font-weight:900; /* Heavy */ font-size:6em; letter-spacing:1px; line-height:1em; }
-	h3 							{ font-size:2.25em; font-weight:200; /* Thin */ letter-spacing:1px; line-height:1em; padding:0.5em 0 0.25em 0; }
+	h3 							{ color:#666666; font-size:2.25em; font-weight:200; /* Thin */ letter-spacing:1px; line-height:1em; padding:0.5em 0 0.25em 0; }
+	h4							{ color: #f2f2f2; font-size:2.25em; font-weight:200; /* Thin */ letter-spacing:1px; line-height:1em; padding:0.5em 0 0.25em 0; }
+	h5							{ color:#666666;}
+
 
 	/* Links */
 	a 								{ border-bottom:1px solid rgba(0,0,0,0.2); color:#333333; text-decoration:none; -moz-transition:border-color 0.2s ease-in-out; -ms-transition:border-color 0.2s ease-in-out; -o-transition:border-color 0.2s ease-in-out; -webkit-transition:border-color 0.2s ease-in-out; transition:border-color 0.2s ease-in-out; }
@@ -82,10 +85,10 @@ css Zen Garden submission 217 - 'Screen Filler', by Elliot Jay Stocks, http://el
 	section.intro div.summary 	{ color:#333333; padding:10% 0; }
 	section.intro div.preamble 	{ background:#ffffff; color:#666666; margin-left:-30%; padding:5% 5% 5% 30%; }
 	div.main 					{ padding:5%; }
-	aside.sidebar 				{ background:#ccffcc; padding:5%; }
+	aside.sidebar 				{ background:#66cc99; padding:5%; }
 	aside.sidebar ul 			{ padding:0.5em 0 2em 0; }
 	aside.sidebar ul li 		{ color:#333333; list-style:none; margin:0; padding:0 0 0.825em 0; }
-	footer 						{ background:#ccffcc; clear:both; color:#333333; padding:1em 5%; width:80%; }
+	footer 						{ background:#66cc99; clear:both; color:#333333; padding:1em 5%; width:80%; }
 	footer a 					{ margin-right:0.5em; }
 
 	div.explanation 			{ color:#666666; padding:5%; }
@@ -143,28 +146,28 @@ css Zen Garden submission 217 - 'Screen Filler', by Elliot Jay Stocks, http://el
 	/* 900 and up */	
 	@media screen and (min-width:900px) {
 
-		body 				{ font-size:110%; }
+		body 				{ font-size:100%; }
 
 	}
 
 	/* 1500 and up */	
 	@media screen and (min-width:1500px) {
 
-		body 				{ font-size:125%; }
+		body 				{ font-size:100%; }
 
 	}
 
 	/* 1800 and up */	
 	@media screen and (min-width:1800px) {
 
-		body 				{ font-size:150%; }
+		body 				{ font-size:100%; }
 
 	}
 
 	/* 2100 and up */	
 	@media screen and (min-width:2100px) {
 
-		body 				{ font-size:175%; }
+		body 				{ font-size:100%; }
 
 	}
 
@@ -172,7 +175,7 @@ css Zen Garden submission 217 - 'Screen Filler', by Elliot Jay Stocks, http://el
 	/* 2500 and up */	
 	@media screen and (min-width:2500px) {
 
-		body 				{ font-size:200%; }
+		body 				{ font-size:110%; }
 
 	}
 
