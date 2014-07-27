@@ -25,62 +25,65 @@ This CSS design was heavily lifted from the Creative Commons "Handcrafted" by El
 	<section class="intro" id="zen-intro">
 		<header role="banner">
 			<h1>jarmstrng.github.io</h1>
-			<h2>Happy Blog Times</h2>
+			<h3>Beginning Programming: Active Record in Ruby/Rails</h3>
+			<time datetime="2014-07-27">27 July 2014</time>
 		</header>
 
-		<div class="summary" id="zen-summary" role="article">
+<!-- 		<div class="summary" id="zen-summary" role="article">
 			<p>Exploring the eccentricities of the web, technology, and life.</p>
 			<p>Also, learning via poking things with a stick.</p>
-		</div>
+		</div> -->
 
 		<div class="preamble" id="zen-preamble" role="article">
-			<h3>Active Record in Ruby/Rails Made Simple </h3>
 
+<p>The goal of this article is to introduce the concepts behind ActiveRecord and active record pattern to beginning programmers so that they can go on to successfully complete beginning tutorials without being confused by the terminology, etc.
 
-Ruby/Rails's style of Active Record, object-relational mapping
+<h3>What is ActiveRecord?</h3>
+<p>"Active record pattern" is an <a href="http://jarmstrng.github.io/blog_posts/week6_technical.html">object-oriented paradigm</a> for relational databases (nothing here will make sense if you don't have any idea what that means, so <a href="http://jarmstrng.github.io/blog_posts/week6_technical.html">go read up</a> if you need to and then come back here when you're done.) 
 
-"Active record is an approach to accessing data in a database. A database table or view is wrapped into a class. Thus, an object instance is tied to a single row in the table."
-"The wrapper class implements accessor methods or properties for each column in the table or view."
-http://en.wikipedia.org/wiki/Active_record_pattern
+<p>Objects contain data and methods that can act on that data, and so in your database there is a Class for the table, and an instance of that class is a row in the table. The row/object has both data and some functions that can be used to act on that data. 
 
+<p>ActiveRecord is a Ruby library that uses the active record pattern. It comes with the Ruby on Rails framework but is also available as a gem and can be used independently of Rails. It gives you access to handy methods for your Class/table to inherit and use, so you can easily interact with your database in an object-oriented way.
 
-active record - object-oriented paradigm for relational databases- objects contain data and methods that can act on that data. There is a Class for the table, and an instance of that class is a row in the table.
-ActiveRecord - Ruby library - allows for inheritance of functionality from a parent class
+<h3>How it works/Examples</h3>
+<p>"Class methods are used to perform table-level operations, and instance methods perform operations on the individual rows." - <a href="http://rubylearning.com/satishtalim/ruby_activerecord_and_mysql.html">RubyLearning.com</a>
 
-object-relational mapping "convert the object values into groups of simpler values for storage in the database (and convert them back upon retrieval)"
-http://en.wikipedia.org/wiki/Object-relational_mapping
+<p>In the example below, we define the table <code>users</code> as a Class, <code>User</code>. We also define the table <code>things</code> as the Class <code>Thing</code>.
 
-"Class methods are used to perform table-level operations, and instance methods perform operations on the individual rows."
-http://rubylearning.com/satishtalim/ruby_activerecord_and_mysql.html
+<p>We make both classes children of ActiveRecord's <code>Base</code> class so that they can inherit methods like <code>primary_key</code> and <code>column_for_attribute</code> (and more!), which define the primary key field and return the column object for the named attribute, respectively.</p>
+<p>
+<blockquote><pre>
+	class User < ActiveRecord::Base
+	  has_many :things
+	end
 
+	class Thing < ActiveRecord::Base
+	  belongs_to :user
+	end
 
-What it is
-Active record pattern is what you would call an object-oriented paradigm for relational databases. Objects contain data and methods that can act on that data, and so there is a Class for the table, and an instance of that class is a row in the table. The row/object has both data and some functions that can be used to act on that data. 
+	james = user.create(:name => 'James')
+</pre></blockquote>
+<p>
+<p>As you might have guessed, <code>Base</code> also includes the methods <code>has_many</code> and <code>belongs_to</code>, which help to define the relationships between tables in your database.
 
-ActiveRecord is a Ruby library that uses the active record pattern. It comes with the Ruby on Rails framework but can also be used independently of Rails. It gives you handy methods to inherit and use so you can easily interact with your database in an object-oriented way.
+<p>And finally, we have created <code>james</code> as an instance of the class <code>User</code>, and 'James' will go in the :name column of the <code>users</code> table.
 
-How it works
-"Class methods are used to perform table-level operations, and instance methods perform operations on the individual rows."
-http://rubylearning.com/satishtalim/ruby_activerecord_and_mysql.html
+<p>There is a lot more to do in order to make this code work, including defining the tables themselves (imagine that!), which you can easily learn about in one of many tutorials - a couple of which are listed below.
 
-Example
+<h3>Pros</h3>
+<p>By wrapping up data with the methods that can interact with them, active record pattern informs the programmer as to what can be done with that data. Inheritance increases functionality by creating access to a whole host of useful functions that do not have to be defined every time you create a new table/Class.
 
-Pros
+<h3>Cons</h3>
+<p>When you go to test your code to make sure it works, because your data and your methods all wrapped together it is hard to test without a database! To get around this you may need to create a testing database or pass your data as an argument. (See also <a href="http://jgaskins.org/blog/2012/04/20/data-mapper-vs-active-record/" target="new">Data Mapper vs Active Record</a>.)
 
-Cons
+<h3>Alternatives</h3>
+<p>A similar-yet-different option to ActiveRecord in Ruby is <a href="http://sequel.jeremyevans.net/rdoc/files/README_rdoc.html" target="new">Sequel</a>, which is newer to the scene yet offers a few features developers might find appealing, such as a decreased need to use raw SQL in your queries.
 
-Alternatives
+<p>And of course, Ruby isn't the only language with libraries to implement active record architecture. Listing them all isn't the goal of this article, but a quick Google search or Wikipedia reference will help you to learn more about them.
 
+<p>Nor is <a href="http://martinfowler.com/eaaCatalog/activeRecord.html" target="new">active record</a> the only object-oriented approach to relational databases. Data mapper pattern "moves data between objects and a database while keeping them independent of each other and the mapper itself." (<a href="http://martinfowler.com/eaaCatalog/dataMapper.html" target="new">Martin Fowler</a>) 
 
-
-
-<p>Sources and Additional Reading:
-http://en.wikipedia.org/wiki/Active_record_pattern
-http://guides.rubyonrails.org/active_record_basics.html
-http://en.wikipedia.org/wiki/Object-relational_mapping
-http://rubylearning.com/satishtalim/ruby_activerecord_and_mysql.html
-Beginner-friendly intro tutorial for using the ActiveRecord library with SQLite: http://www.integralist.co.uk/posts/sqlite-and-activerecord/
-
+<p>Objects created with an active record approach contain methods including create, read, update, and delete (<a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete" target="new">CRUD</a>). Objects created with a data mapper pattern, though, have a separate "layer" that takes care of those actions. This relieves some of the pain of testing, as you can more easily test your non-CRUD methods.</p>
 
 
 		</div>
@@ -88,20 +91,29 @@ Beginner-friendly intro tutorial for using the ActiveRecord library with SQLite:
 
 	<div class="main supporting" id="zen-supporting" role="main">
 		<div class="explanation" id="zen-explanation" role="article">
-			<h3>More:</h3>
-			<p><a href="https://github.com/jarmstrng" target="new">GitHub</a>
-			<br><a href="http://www.helveticajessica.com/" target="new">Content Management</a></p>
+			
+			<h3>Expand your learning</h3>
+
+<p>This article cannot possibly cover all the ins and outs of active record pattern and ActiveRecord, but should give give you enough of an understanding to go out and learn more on your own. 
+
+
 		</div>
 
 		<div class="participation" id="zen-participation" role="article">
-			<h4>Exploring the unknown requires tolerating uncertainty.</h4>
-			<p>Brian Greene</p>
+
+			<h4>Sources/Additional Reading:</h4>
+<a href="http://en.wikipedia.org/wiki/Active_record_pattern" target="new">Wikipedia: Active Record Pattern</a>
+<br><a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="new">Wikipedia: Object-Relational Mapping</a>
+<br><a href="http://rubylearning.com/satishtalim/ruby_activerecord_and_mysql.html" target="new">ActiveRecord and MySQL</a>
+<br><a href="http://www.integralist.co.uk/posts/sqlite-and-activerecord/" target="new">SQLite and ActiveRecord</a>
+<br><a href="http://guides.rubyonrails.org/active_record_basics.html" target="new">Rails: Active Record Basics</a>
+<br><a href="http://guides.rubyonrails.org/active_record_querying.html" target="new">Rails: Active Record Querying</a>
+<br><a href="http://jgaskins.org/blog/2012/04/20/data-mapper-vs-active-record/" target="new">Data Mapper vs Active Record</a>
+
 		</div>
 
 		<footer>
-			<p>Acknowledgements</p>
-			<p>As it goes with technology, I am simply standing on the shoulders of those who came before (no vacuum tubes for me).</p> 
-			<p>HUGE shoutout to the lovely <a href="http://www.csszengarden.com/" target="blank">Dave Shea</a> and <a href="http://www.elliotjaystocks" target="blank">Elliot Jay Stocks</a>, from whom I shamelessly lifted the bones of this here website ye see before ye.</p>
+			<a href="http://jarmstrng.github.io/" target="blank">Home</a> <a href="http://jarmstrng.github.io/blog_posts/week6_technical.html" target="blank">Ruby Newb's Intro to Classes and Object-Orientedness</a>
 		</footer>
 
 	</div>
@@ -123,11 +135,13 @@ Beginner-friendly intro tutorial for using the ActiveRecord library with SQLite:
 					</li>					<li>
 						<a href="http://jarmstrng.github.io/blog_posts/week6_technical.html" class="design-name">Ruby's Object-Orientedness, Inheritance, Concurrency, Clojure, Software Transactional Memory, Functional Programming...</a>
 					</li>					<li>
-						<a href="http://jarmstrng.github.io/blog_posts/week6_cultural_blog.html" class="design-name">How To Be More Than A Stereotype</a>
-					</li>					<li>
 						<a href="http://jarmstrng.github.io/blog_posts/week7_technical.html" class="design-name">SQL Query Optimization</a>
 					</li>					<li>
+						<a href="http://jarmstrng.github.io/blog_posts/week6_cultural_blog.html" class="design-name">How To Be More Than A Stereotype</a>
+					</li>					<li>
 						<a href="http://jarmstrng.github.io/blog_posts/week7_cultural.html" class="design-name">The Value of Continued Learning</a>
+					</li>					<li>
+						<a href="jarmstrng.github.io/blog_posts/week8_cultural_blog.html" class="design-name">Integrity in the Workplace</a>
 					</li>					</ul>
 				</nav>
 				<h3 class="select">DevBootcamp:</h3>
