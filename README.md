@@ -1,2 +1,0 @@
-jarmstrng.github.io
-===================
