@@ -211,7 +211,7 @@ a.link.white {
 
 /* PAGE INTRO STYLES */
 .page-intro {
-    background: #172751 url('../img/WSC-bg-small.jpg') no-repeat bottom left fixed;
+    background: #172751;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -921,6 +921,9 @@ section.speakers .qcTabTitle .section-title {
   .sponsors-section .supporter-logo {
     margin-top: 1em;
   }
+}
+a.link.coral.sponsor-link:hover {
+  color: white;
 }
 
 /* CODE OF CONDUCT SECTION & PAGE STYLES */
