@@ -1,0 +1,107 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/print-design-services/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/website-design-service-artists/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/cville-home/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/sample-page/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/panel-path-cto/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/global-diversity-cfp-day-nyc/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/blogging-for-women-in-tech/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/writespeakcode-2017-conference-portland/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/2016-writespeakcode-call-volunteers/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/developing-blog-posts-workshop-women-engineers-writespeakcode/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/top-5-tips-newbie-programmers/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/dont-suck-programming-programming-sucks/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/newbies-get-help-need-asking-right-questions/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/beginning-programming-active-record-rubyrails/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/stereotype/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/ruby-newbs-intro-classes-object-orientedness/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/rspec-3-cheatsheet/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/194/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/key-thing-dont-teach-beginning-programmers/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/syonara-suckers-easy-visa-countries-max-stay-us-citizens/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/page/2
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/content-writing/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/culture/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/nyc/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/ones-and-zeros/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/travel-resources-2/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/categories/writespeakcode/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/tags/map-geek/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/tags/visa/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/author/jessica
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/404/
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
+/404.html
+  Link: </webpack-runtime-e45fd6ba3f778a625e91.js>; rel=preload; as=script
+  Link: </0-1cdcc1a603adc9a2b524.js>; rel=preload; as=script
