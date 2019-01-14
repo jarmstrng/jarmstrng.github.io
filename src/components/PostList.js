@@ -13,31 +13,30 @@ export default class IndexPage extends React.Component {
             <h1 className="has-text-weight-bold is-size-2">{title}</h1>
           </div>
           {posts.map(({ node: post }) => (
-            <div
-              className="content"
-              style={{ border: '1px solid #eaecee', borderRadius: '12px', padding: '2em 4em' }}
-              key={post.id}
-            >
-              <p>
-                <Link className="has-text-grey-dark has-text-weight-bold" to={post.slug}>
-                  {post.title}
-                </Link>
-                <span> &bull; </span>
-                <small>
-                  {post.date}
-                </small>
-              </p>
-              <div>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: post.excerpt.replace(/<p class="link-more.*/, ''),
-                  }}
-                />
-                <Link className="button is-small" to={post.slug}>
-                  Keep Reading →
-                </Link>
+            <Link to={post.slug} style={{  }}>
+              <div
+                className="content"
+                style={{ border: '1px solid #eaecee', borderRadius: '12px', padding: '2em 4em', marginBottom: '2em' }}
+                key={post.id}
+              >
+                <p>
+                  <Link className="has-text-grey-dark has-text-weight-bold" to={post.slug}>
+                    {post.title}
+                  </Link>
+                  <span> &bull; </span>
+                  <small className="has-text-dark">
+                    {post.date}
+                  </small>
+                </p>
+                <div>
+                  <div className="has-text-dark"
+                    dangerouslySetInnerHTML={{
+                      __html: post.excerpt,
+                    }}
+                  />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
