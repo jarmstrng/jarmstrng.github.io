@@ -15,11 +15,11 @@ export default class IndexPage extends React.Component {
           {posts.map(({ node: post }) => (
             <div
               className="content"
-              style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+              style={{ border: '1px solid #eaecee', borderRadius: '12px', padding: '2em 4em' }}
               key={post.id}
             >
               <p>
-                <Link className="has-text-primary" to={post.slug}>
+                <Link className="has-text-grey-dark has-text-weight-bold" to={post.slug}>
                   {post.title}
                 </Link>
                 <span> &bull; </span>
